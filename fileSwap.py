@@ -1,18 +1,18 @@
 def swapFileData():
-    a=open("file1.txt", 'r')
-    with open ("file1.txt", "r") as a:
-        data_1 = a.read()
+    file1 = input("Enter file name here: ")
+    file2 = input("Enter file name here: ")
 
-    b=open("file2.txt", 'r')
-    with open ("file2.txt", "r") as b:
-        data_2 = b.read()
+    with open (file1, 'r') as a:
+        data_a = a.read()
+    
+    with open (file2, 'r') as b:
+        data_b = b.read()
 
-    c=open("file1.txt", 'w')
-    with open ("file1.txt", "r") as c:
-        c.write(data_2)
+    with open (file1, 'w') as a:
+        a.write(data_b)
 
-    d=open("file2.txt", 'w')
-    with open ("file2.txt", "r") as d:
-        d.write(data_1)
+    with open (file2, 'w') as a:
+        b.write(data_a)
+
 
 swapFileData()
